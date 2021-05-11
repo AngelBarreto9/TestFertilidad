@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Test de fertilidad</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+	</script>
+	<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-app.js"></script>
+
+	<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+	<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-analytics.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	
+	<script src="js/index.js" type="module"></script>
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="fade-in">
+
+		<!-- Intro -->
+		<div id="intro">
+			<h1 class="">Test de fertilidad</h1>
+			<br><br><br><br><br>
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			</ul>
+		</div>
+
+		<!-- Header -->
+		<header id="header">
+			<a class="logo">Información</a>
+		</header>
+
+
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Featured Post -->
+			<article class="post featured">
+				<header class="major">
+					<span class="date" id="date"></span>
+					<h2><a>Este es un test de fertilidad</a></h2>
+					<p>Se realizo un estudio con el semen de algunos voluntario, las muestras son analizadas con los criterios de la OMS 2010</p>
+					<p>La concentracion de espermatozoides esta relacionada con datos sociodemograficos, factores ambientales, estado de salud y habitos de vida</p><br>
+					<p>Para tener resultados mas especificos, se te pide que llenes la informacion que viene a continuacion con tus datos personales, esto arrojara un resultado dependiendo de los datos ingresados</p>
+				</header>
+				<!-- <a class="image main"><img src="images/pic01.jpg" alt="" /></a> -->
+				<ul class="actions special">
+					<!-- <li><a class="button large">Full Story</a></li> -->
+				</ul>
+			</article>
+
+			<!-- Posts -->
+			<section class="posts" id="DomData">
+				<article>
+					<header>
+						<h2><a>Epoca en la que se realizo el analisis</a></h2>
+					</header>
+					<br><br><br>
+					<div class="input-group mb-3">
+						<label for="">Es necesario elegir una opción</label>
+						<select class="custom-select estacion" name="estacion" id="estacion">
+							<option value="#" disabled selected>Seleccione una opción</option>
+							<option value="Invierno">Invierno</option>
+							<option value="Primavera">Primavera</option>
+							<option value="Verano">Verano</option>
+							<option value="Otoño">Otoño</option>
+						</select>
+					</div>
+				</article>
+				<article>
+					<header>
+						<h2><a>Edad </a></h2>
+					</header>
+					<br><br><br>
+					
+					<label class="">Ingresa el rango de tu edad actual: </label>
+					<div class="form-group">
+						<div class="col-lg-6" id=edad>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="18-22">
+								<label class="form-check-label" for="inlineRadio1">18 a 22 años</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="23-29">
+								<label class="form-check-label" for="inlineRadio2">23 a 29 años</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="30-36">
+								<label class="form-check-label" for="inlineRadio3">30 a 36 años</label>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article>
+					<header>
+						<h2><a>Enfermedades infantiles</a></h2>
+					</header>
+					<label for="">Si de niño tuviste alguna enfermedad como: Varicela, Sarampión, Paperas, Polio</label>
+					<div class="form-grou2">
+						<div class="col-lg-6" id=infante>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions2" id="yes" value="0">
+								<label class="form-check-label" for="yes">Sí</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions2" id="no" value="1">
+								<label class="form-check-label" for="no">No</label>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article>
+					<header>
+						<h2><a>Accidente o trauma grave</a></h2>
+					</header>
+					<div class="form-group">
+						<div class="col-lg-6" id=traumas>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions3" id="traumaConfirmation" value="0">
+								<label class="form-check-label" for="traumaConfirmation">Sí</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions3" id="traumaNegation" value="1">
+								<label class="form-check-label" for="traumaNegation">No</label>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article>
+					<header>
+						<h2><a>Intervención quirúrgica </a></h2>
+					</header>
+					<div class="form-group">
+						<div class="col-lg-6" id=cirugias>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions4" id="SurgicalInterventionConfirmation" value="0">
+								<label class="form-check-label" for="SurgicalInterventionConfirmation">Sí</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions4" id="SurgicalInterventionNegation" value="1">
+								<label class="form-check-label" for="SurgicalInterventionNegation">No</label>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article>
+					<header>
+						<h2><a>Fiebre alta en el último año</a></h2>
+					</header>
+					<div class="form-group">
+						<div class="col-lg-6" id=fiebre>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions5" id="FeverLess3Mounth" value="-1">
+								<label class="form-check-label" for="FeverLess3Mounth">Hace menos de 3 meses</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions5" id="FeverMore3Mounth" value="0">
+								<label class="form-check-label" for="FeverMore3Mounth">Hace más de 3 meses</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions5" id="FeverNegation" value="1">
+								<label class="form-check-label" for="FeverNegation">No</label>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article>
+					<header>
+						<h2><a>Frecuencia de alcohol </a></h2>
+					</header>
+					<div class="form-group">
+						<div class="col" id=alcohol>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions6" id="OftenConsumeAlcohol" value="0.2">
+								<label class="form-check-label" for="OftenConsumeAlcohol">Varias veces al dia</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions6" id="EveryConsumeAlcohol" value="0.4">
+								<label class="form-check-label" for="EveryConsumeAlcohol">Todos los dias</label>
+							</div>
+
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions6" id="SomeConsumeAlcohol" value="0.6">
+								<label class="form-check-label" for="SomeConsumeAlcohol">Varias veces a la semana</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions6" id="OneConsumeAlcohol" value="0.8">
+								<label class="form-check-label" for="OneConsumeAlcohol">Una vez a la semana</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions6" id="rarelyConsumeAlcohol" value="1">
+								<label class="form-check-label" for="rarelyConsumeAlcohol">Casi nunca o nunca</label>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article>
+					<header>
+						<h2><a>Frecuencia de consumo de tabaco </a></h2>
+					</header>
+					<div class="form-group">
+						<div class="col-lg-6" id=cigarro>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions7" id="NeverSmoke" value="-1">
+								<label class="form-check-label" for="NeverSmoke">Nunca</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions7" id="OftenSmoke" value="0">
+								<label class="form-check-label" for="OftenSmoke">Ocasional</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions7" id="EverySmoke" value="1">
+								<label class="form-check-label" for="EverySmoke">Diario</label>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="align-self-center">
+					<header>
+						<h2><a>Numero de horas que pasa sentado al dia  </a></h2>
+					</header>
+					<div class="form-group">
+						<div class="col-lg-6" id=silla>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions8" id="SeatedTime1" value="-1">
+								<label class="form-check-label" for="SeatedTime1">0 a 6</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions8" id="SeatedTime2" value="0">
+								<label class="form-check-label" for="SeatedTime2">6 a 12 </label>
+							</div>
+
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions8" id="SeatedTime3" value="1">
+								<label class="form-check-label" for="SeatedTime3">12 a 18</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions8" id="SeatedTime4" value="2">
+								<label class="form-check-label" for="SeatedTime4">18 a 24</label>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article>
+
+					<br><br><br><br><br><br>
+
+					<button type="button" class="btn" id="get_data">Obtener resultado</button>
+				</article>
+			</section>
+
+
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+<style>
+	.swal-wide{
+    width:900px !important;
+	height:550px !important ;
+}
+	.swal-wide2{
+    width:900px !important;
+	height:600px !important ;
+}
+</style>
